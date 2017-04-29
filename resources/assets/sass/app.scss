@@ -1,0 +1,90 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+body {
+  color:#fff;
+
+}
+
+input[type="text"] {
+     border-top: 0;
+     border-right: 0;
+     border-left: 0;
+
+     -webkit-box-shadow: none;
+     box-shadow: none;
+}
+input[type="text"]:focus {
+     -webkit-box-shadow: none;
+     box-shadow: none;
+}
+
+section{
+    padding: 50px 0px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 60px;
+    font-variant: all-caps;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 14px;
+}
+
+li {
+    font-size: 30px;
+}
+
+.project{
+  margin: 50px 0;
+}
+
+
+
+a{
+  color: #fff;
+  display: inline-block;
+}
+
+#intro{
+  margin-top: 100px;
+}
+
+#admin_link{
+  color:#1c1c1c;
+}
+.navbar {
+    padding-top: 15px;
+    border: 0;
+    border-radius: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+      background-color: #1c1c1c;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-nav  li a:hover {
+    color: #fff !important;
+}
