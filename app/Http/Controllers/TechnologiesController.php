@@ -18,9 +18,7 @@ class TechnologiesController extends Controller
      */
     public function index()
     {
-        //
-        $technologies = Technology::all();
-        return view('admin.technology.index', compact('technologies'));
+
     }
 
     /**
@@ -30,8 +28,7 @@ class TechnologiesController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.technologies.create');
+
     }
 
     /**
@@ -46,8 +43,6 @@ class TechnologiesController extends Controller
         $technology = new Technology(request(['name']));
         //check if it already exists
         $tech = Technology::where('name', $technology->name)->first();
-
-
 
 
         if(!json_decode($tech, true))

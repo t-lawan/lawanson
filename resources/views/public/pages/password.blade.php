@@ -14,7 +14,7 @@
     </div>
     <br />
     <div class="container-fluid text-center" id="passwordForm">
-      <form class="form-horizontal col-md-4 col-md-offset-4" method="post" action="{{route('confirm_verified')}}">
+      <form class="form-horizontal col-sm-4 col-sm-offset-4" method="post" action="{{route('confirm_verified')}}">
         {{ csrf_field() }}
         <div class="form-group">
 
