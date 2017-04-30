@@ -52,6 +52,7 @@ class ExperiencesController extends Controller
       return view('admin.experiences.index',compact('experiences'));
   }
 
+
   /**
    * Display the specified resource.
    *
@@ -61,6 +62,8 @@ class ExperiencesController extends Controller
   public function show($id)
   {
       //
+      $experience = Experience::find($id);
+      return view('admin.experiences.show', compact('experience'));
   }
 
   /**

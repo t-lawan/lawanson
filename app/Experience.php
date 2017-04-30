@@ -18,4 +18,9 @@ class Experience extends Model
     {
       return $this->belongsTo(User::class);
     }
+
+    public function makeDuty(Duty $duty)
+    {
+      $this->duties()->save($duty);
+    }
 }

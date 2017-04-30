@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
-use App\Technology;
-use App\Project;
-use App\Http\Requests\StoreNewTechnology;
+use App\Duty;
+use App\Experience;
 
-class TechnologiesController extends Controller
+class DutiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +16,6 @@ class TechnologiesController extends Controller
     public function index()
     {
         //
-        $technologies = Technology::all();
-        return view('admin.technology.index', compact('technologies'));
     }
 
     /**
@@ -31,7 +26,6 @@ class TechnologiesController extends Controller
     public function create()
     {
         //
-        return view('admin.technologies.create');
     }
 
     /**
@@ -40,33 +34,14 @@ class TechnologiesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Project $project)
+    public function store(Experience $experience)
     {
-
-        $technology = new Technology(request(['name']));
-        //check if it already exists
-        $tech = Technology::where('name', $technology->name)->first();
-
-
-
-
-        if(!json_decode($tech, true))
-        {
-
-          $technology->save();
-          $project->technologies()->attach($technology->id);
-          return back();
-        }
-        foreach ($project->technologies as $project_technology) {
-          if($project_technology->name === $technology->name)
-          {
-
-            return back();
-          }
-        }
-
-        $project->technologies()->attach($tech);
+        //
+        $duty = new Duty(request(['description']));
+        $experience->makeDuty($duty);
         return back();
+
+
     }
 
     /**
@@ -112,6 +87,5 @@ class TechnologiesController extends Controller
     public function destroy($id)
     {
         //
-
     }
 }

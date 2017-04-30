@@ -5,6 +5,12 @@
 
         @include('admin.experiences.partials.form.delete')
       </span>
+
+      <span class="pull-right">
+        <a href="/admin/experience/{{$experience->id}}">
+          <button type="button" class="btn btn-secondary">Add Duty</button>
+        </a>
+      </span>
   </div>
   <div class="panel-body">
     <h4>Role: {{$experience->role}}</h4>

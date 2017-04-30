@@ -27,6 +27,7 @@ class ProjectsController extends Controller
     public function create()
     {
         //
+
         return view('admin.projects.create');
     }
 
@@ -100,4 +101,6 @@ class ProjectsController extends Controller
         $projects = Project::all();
         return view('admin.projects.index',compact('projects'));
     }
+
+
 }

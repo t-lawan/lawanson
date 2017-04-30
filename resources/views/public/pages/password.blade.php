@@ -24,6 +24,7 @@
                 <strong>{{ $errors->first('name') }}</strong>
             </span>
         @endif
+        <br />
 
           <button class="btn btn-secondary btn-block"type="submit"> enter</button>
         </div>

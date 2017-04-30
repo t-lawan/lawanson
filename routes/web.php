@@ -19,6 +19,7 @@ Route::delete('/admin/institution/{id}', 'InstitutionsController@destroy')->name
 
 Route::get('/admin/experience','ExperiencesController@index')->name('experience_list');
 Route::get('/admin/experience/create','ExperiencesController@create')->name('experience_form');
+Route::get('/admin/experience/{id}','ExperiencesController@show')->name('experience_show');
 Route::post('/admin/experience/create','ExperiencesController@store')->name('experience_save');
 Route::delete('/admin/experience/{id}', 'ExperiencesController@destroy')->name('experience_delete');
 
@@ -28,6 +29,10 @@ Route::get('/admin/technology/create','TechnologiesController@create')->name('te
 Route::post('/admin/project/{project}/technology','TechnologiesController@store')->name('technology_save');
 Route::delete('/admin/technology/{id}', 'TechnologiesController@destroy')->name('technology_delete');
 
+Route::get('/admin/duty','DutiesController@index')->name('duty_list');
+Route::get('/admin/duty/create','DutiesController@create')->name('duty_form');
+Route::post('/admin/experience/{experience}/duty','DutiesController@store')->name('duty_save');
+Route::delete('/admin/duty/{id}', 'DutiesController@destroy')->name('duty_delete');
 
 Auth::routes();
 
