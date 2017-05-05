@@ -13,12 +13,12 @@
     @endforeach
   </h3>
 
-  <button class="btn">
-      {{$project->github_link}}
-  </button>
+  <a href="{{$project->github_link}}" target="_blank" class="btn btn-secondary">
+    Github Link
+  </a>
 
-  <button class="btn">
-    {{$project->site_link}}
-  </button>
+  <a href="{{$project->site_link}}" target="_blank"  class="btn btn-secondary">
+    Site Link
+  </a>
 
 </div>

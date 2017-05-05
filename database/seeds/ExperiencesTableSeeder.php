@@ -17,7 +17,7 @@ class ExperiencesTableSeeder extends Seeder
           'company_name' => 'StreamAMG',
           'role' => 'Technical Account Manager',
           'city' => 'London',
-          'start_date' => '2017-05-09',
+          'start_date' => '2016-05-09',
           'end_date' => '2017-04-23',
         ]);
 
@@ -26,8 +26,8 @@ class ExperiencesTableSeeder extends Seeder
           'company_name' => 'Isotrol',
           'role' => 'Technical Assistant',
           'city' => 'Sevilla',
-          'start_date' => '2017-01-15',
-          'end_date' => '2017-04-13',
+          'start_date' => '2016-01-15',
+          'end_date' => '2016-04-13',
         ]);
 
         DB::table('experiences')->insert([

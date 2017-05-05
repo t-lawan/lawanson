@@ -18,7 +18,7 @@ class ProjectsTableSeeder extends Seeder
           'user_id' => 1,
           'name' => 'plan',
           'description' => 'Project/Task Management Web Application',
-          'github_link' => '#',
+          'github_link' => 'https://github.com/t-lawan/plan',
           'site_link' => '#',
         ]);
 
@@ -26,15 +26,15 @@ class ProjectsTableSeeder extends Seeder
           'user_id' => 1,
           'name' => 'talk',
           'description' => 'Diary/Post Feed Web Application',
-          'github_link' => '#',
-          'site_link' => '#',
+          'github_link' => 'https://github.com/t-lawan/talk',
+          'site_link' => 'http://talk.lawanson.me/',
         ]);
 
         DB::table('projects')->insert([
           'user_id' => 1,
           'name' => 'lettings',
           'description' => 'Property Lettings Web Application',
-          'github_link' => '#',
+          'github_link' => 'https://github.com/t-lawan/lettings',
           'site_link' => '#',
         ]);
     }

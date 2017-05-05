@@ -13,7 +13,7 @@
 
     @include('public.partials.scripts')
 
-    @include('public.partials.footer')
+
 
 
 </body>
