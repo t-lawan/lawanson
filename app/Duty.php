@@ -8,6 +8,7 @@ class Duty extends Model
 {
     //
     protected $fillable = array('description');
+
     public function experience()
     {
       return $this->belongsTo(Experience::class);

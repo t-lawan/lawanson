@@ -20,5 +20,10 @@ class Institution extends Model
       return $this->hasMany(Subject::class);
     }
 
+    public function makeSubject(Subject $subject)
+    {
+      $this->subjects()->save($subject);
+    }
+
 
 }

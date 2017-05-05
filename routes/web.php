@@ -16,6 +16,7 @@ Route::delete('/admin/project/{id}', 'ProjectsController@destroy')->name('projec
 //Institution
 Route::get('/admin/institution','InstitutionsController@index')->name('institution_list');
 Route::get('/admin/institution/create','InstitutionsController@create')->name('institution_form');
+Route::get('/admin/institution/{id}','InstitutionsController@show')->name('institution_show');
 Route::post('/admin/institution/create','InstitutionsController@store')->name('institution_save');
 Route::delete('/admin/institution/{id}', 'InstitutionsController@destroy')->name('institution_delete');
 
@@ -35,6 +36,10 @@ Route::delete('/admin/technology/{id}', 'TechnologiesController@destroy')->name(
 //Duty
 Route::post('/admin/experience/{experience}/duty','DutiesController@store')->name('duty_save');
 Route::delete('/admin/duty/{id}', 'DutiesController@destroy')->name('duty_delete');
+
+//Subjects
+Route::post('/admin/institution/{institution}/subjects','SubjectsController@store')->name('subject_save');
+Route::delete('/admin/subject/{id}', 'SubjectsController@destroy')->name('subject_delete');
 
 Auth::routes();
 

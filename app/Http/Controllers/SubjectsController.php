@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Institution;
-use Illuminate\Http\Request;
-use App\Http\Requests\StoreNewInstitution;
 
-class InstitutionsController extends Controller
+use Illuminate\Http\Request;
+use App\Subject;
+use App\Experience;
+use App\Institution;
+
+class SubjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +17,6 @@ class InstitutionsController extends Controller
     public function index()
     {
         //
-        $institutions = Institution::all();
-        return view('admin.institutions.index', compact('institutions'));
     }
 
     /**
@@ -27,7 +27,6 @@ class InstitutionsController extends Controller
     public function create()
     {
         //
-        return view('admin.institutions.create');
     }
 
     /**
@@ -36,20 +35,12 @@ class InstitutionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreNewInstitution $request)
+    public function store(Institution $institution)
     {
         //
-        $institution = new Institution(request([
-            'name',
-            'degree',
-            'city',
-            'start_date',
-            'end_date'
-          ]));
-        auth()->user()->makeInstitution($institution);
-
-        $institutions = Institution::all();
-        return view('admin.institutions.index',compact('institutions'));
+        $subject = new Subject(request(['name', 'grade']));
+        $institution->makeSubject($subject);
+          return back();
     }
 
     /**
@@ -61,8 +52,6 @@ class InstitutionsController extends Controller
     public function show($id)
     {
         //
-        $institution = Institution::find($id);
-        return view('admin.institutions.show', compact('institution'));
     }
 
     /**
@@ -86,7 +75,6 @@ class InstitutionsController extends Controller
     public function update(Request $request, $id)
     {
         //
-
     }
 
     /**
@@ -98,8 +86,7 @@ class InstitutionsController extends Controller
     public function destroy($id)
     {
         //
-        Institution::find($id)->delete();
-        $institutions = Institution::all();
-        return view('admin.institutions.index',compact('institutions'));
+        Subject::find($id)->delete();
+        return back();
     }
 }

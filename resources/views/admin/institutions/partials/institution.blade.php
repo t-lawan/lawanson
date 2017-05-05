@@ -5,6 +5,11 @@
 
         @include('admin.institutions.partials.form.delete')
       </span>
+      <span class="pull-right">
+        <a href="/admin/institution/{{$institution->id}}">
+          <button type="button" class="btn btn-secondary">Add Subject</button>
+        </a>
+      </span>
   </div>
   <div class="panel-body">
     <h4>Degree: {{$institution->degree}}</h4>

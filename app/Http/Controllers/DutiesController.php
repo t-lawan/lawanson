@@ -87,5 +87,7 @@ class DutiesController extends Controller
     public function destroy($id)
     {
         //
+        Duty::find($id)->delete();
+        return back();
     }
 }
