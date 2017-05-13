@@ -19,7 +19,7 @@ class ProjectsTableSeeder extends Seeder
           'name' => 'plan',
           'description' => 'Project/Task Management Web Application',
           'github_link' => 'https://github.com/t-lawan/plan',
-          'site_link' => '#',
+          'site_link' => 'http://plan.lawanson.me/',
         ]);
 
         DB::table('projects')->insert([
@@ -35,7 +35,7 @@ class ProjectsTableSeeder extends Seeder
           'name' => 'lettings',
           'description' => 'Property Lettings Web Application',
           'github_link' => 'https://github.com/t-lawan/lettings',
-          'site_link' => '#',
+          'site_link' => 'http://lettings.lawanson.me/',
         ]);
     }
 }
