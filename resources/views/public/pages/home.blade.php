@@ -4,7 +4,7 @@
 
   @include('public.section.jumbotron')
 
-  @include('public.section.project')
+  @include('public.section.newproject')
 
   @include('public.section.education')
 
