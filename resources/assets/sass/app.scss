@@ -29,7 +29,7 @@ input[type="text"]:focus {
 
 section{
     padding: 50px 0px;
-    height: 140vh;
+    margin-bottom: 50vh;
 }
 
 h1 {
@@ -64,16 +64,13 @@ a{
   margin-top: 100px;
 }
 
-#admin_link{
-  color:#1c1c1c;
-}
 .navbar {
-    padding-top: 15px;
+
     border: 0;
     border-radius: 0;
     font-size: 12px;
     letter-spacing: 5px;
-      background-color: #1c1c1c;
+    background-color: #1c1c1c;
 }
 .navbar .navbar-nav {
   display: inline-block;
