@@ -2,6 +2,8 @@
 
 @section('content')
 
+  @include('public.partials.nav.site')
+
   @include('public.section.jumbotron')
 
   @include('public.section.newproject')
