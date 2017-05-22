@@ -10,32 +10,36 @@
           <br />
           <br />
 
-          <h3 data-toggle="collapse" data-target="#passwordForm" > Click Here to Enter Password</h3>
+          <button class="btn btn-primary" data-toggle="collapse" data-target="#passwordForm" > Click Here to Enter Password</button>
 
 
 
     </div>
     <br />
     <div class="container-fluid text-center collapse" id="passwordForm">
-      <form class="form-horizontal col-sm-4 col-sm-offset-4" method="post" action="{{route('confirm_verified')}}">
-        {{ csrf_field() }}
-        <div class="input-group">
+      <div class="col-xs-8 col-xs-offset-2">
+        <form class="form-horizontal col-sm-4 col-sm-offset-4" method="post" action="{{route('confirm_verified')}}">
+          {{ csrf_field() }}
+          <div class="input-group">
 
-        <input name="password"type="password" class="form-control" id="password" placeholder="enter password" required="true">
-        <span class="input-group-btn">
-          <button class="btn btn-outline-secondary btn-block"type="submit"> enter</button>
-        </span>
-        @if ($errors->has('password'))
-            <span class="help-block">
-                <strong>{{ $errors->first('password') }}</strong>
-            </span>
-        @endif
+          <input name="password"type="password" class="form-control" id="password" placeholder="enter password" required="true">
+          <span class="input-group-btn">
+            <button class="btn btn-outline-secondary btn-block"type="submit"> enter</button>
+          </span>
+          @if ($errors->has('password'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('password') }}</strong>
+              </span>
+          @endif
 
 
 
-        </div>
+          </div>
 
-      </form>
+        </form>
+
+      </div>
+
 
     </div>
 

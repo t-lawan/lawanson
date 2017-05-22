@@ -30,7 +30,7 @@ $navbar-default-bg: #fff;
 $btn-default-color: $text-color;
 
 // Inputs
-$input-border: lighten($text-color, 40%);
+$input-border: $body-bg;
 $input-border-focus: lighten($body-bg, 25%);
 $input-color-placeholder: lighten($text-color, 30%);
 
