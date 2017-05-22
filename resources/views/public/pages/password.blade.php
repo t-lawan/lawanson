@@ -10,7 +10,7 @@
           <br />
           <br />
 
-          <h2 data-toggle="collapse" data-target="#passwordForm" > Click Here to Enter Password</h2>
+          <h3 data-toggle="collapse" data-target="#passwordForm" > Click Here to Enter Password</h3>
 
 
 
